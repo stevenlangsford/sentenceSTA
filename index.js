@@ -14,10 +14,10 @@ const favicon = require('serve-favicon')
 app.use(favicon(__dirname + '/public/psi.ico')); //You might want to change this.
 
 app.use(session({
-  cookieName: 'session',
-  secret: 'not_the_actual_secret',
-  duration: 30 * 60 * 1000,
-  activeDuration: 5 * 60 * 1000,
+    cookieName: 'session',
+    secret: process.env.COOKIE_SECRET,
+    duration: 30 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000,
 }));
 
 app.set('port', (process.env.PORT || 5000));
@@ -53,10 +53,10 @@ app.get("/dashboard",function(req,res){
 });
 
 
-app.get("/getresponses",requireLogin,function(req,res){
+app.get("/getsentenceresponses",requireLogin,function(req,res){
     var pool = new pg.Pool({connectionString:process.env.DATABASE_URL});
     pool.connect(function(err,client,done){
-	client.query('select * from responses',function(err,result){
+	client.query('select * from sentenceresponses',function(err,result){
 	    if(err){
 		{console.error(err); res.send("Error "+err);}
 		}else{
@@ -68,7 +68,7 @@ app.get("/getresponses",requireLogin,function(req,res){
 			   }
 
 		    var response_csv = json2csv({data: responses, fields:fields});
-		    res.attachment("responsedata.csv");
+		    res.attachment("sentenceresponsedata.csv");
 		    res.send(response_csv);
 		}
 	});//end query
@@ -155,7 +155,7 @@ app.post('/response',function(req,res){
     )    
     // connection using created pool
     pool.connect(function(err, client, done) {
-    	client.query('insert into responses values ($1,$2)', //NOTE this assumes table responses exists with cols 'time', 'responseobj' !
+    	client.query('insert into sentenceresponses values ($1,$2)', //NOTE this assumes table responses exists with cols 'time', 'responseobj' !
 		     [Date.now(),
 		     req.body.myresponse],
     		     function(err, result){
@@ -170,8 +170,6 @@ app.post('/response',function(req,res){
     });
     pool.end()
 });
-
-
 
 //Ok, run this thing!
 app.listen(app.get('port'), function() {

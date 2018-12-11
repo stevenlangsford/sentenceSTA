@@ -1,0 +1,6 @@
+library(tidyverse)
+
+stimsource.df <- read.csv("stimcollection1.csv", stringsAsFactors=FALSE)
+
+cat(paste0("var stim = shuffle(['",paste(stimsource.df$sentence,collapse="','"),"'])"),
+    file="stimarr.js")
