@@ -9,11 +9,13 @@ function responseListener(aresponse){//global so it'll be just sitting here avai
     //    console.log("responseListener heard: "+aresponse); //diag
     trials[trialindex].response = aresponse;
     trials[trialindex].responseTime= Date.now();
+
+    var saveme = JSON.stringify(trials[trialindex])
     
-    // $.post('/response',{myresponse:JSON.stringify(trials[trialindex])},function(success){
-    // 	console.log(success);//For now server returns the string "success" for success, otherwise error message.
-    // });
-    console.log(aresponse); //note all trial types send responses here: acc, gram and spacer. They call for different save handling? Is this bad...?
+    $.post('/response',{myresponse:saveme},function(success){
+    	console.log(success);//For now server returns the string "success" for success, otherwise error message.
+    });
+    console.log(saveme); //note all trial types send responses here: acc, gram and spacer. They call for different save handling? Is this bad...?
     
     //can put this inside the success callback, if the next trial depends on some server-side info.
     trialindex++; //increment index here at the last possible minute before drawing the next trial, so trials[trialindex] always refers to the current trial.
@@ -34,9 +36,8 @@ function nextTrial(){
 //Also note this means you have to be consistent with the things that are added to each trial before they are saved, maybe init with NA values in the constructor.
 function makeTrial(questiontext,targetsentence, hm_options,option_bookend_labels){
     this.ppntID = localStorage.getItem("ppntID");
-
     this.questiontext = questiontext;
-    this.targetsentence = targetsentence;
+    this.text = targetsentence;
     this.hm_options=hm_options;
     this.bookend_labels=option_bookend_labels;
 
@@ -53,7 +54,13 @@ function makeTrial(questiontext,targetsentence, hm_options,option_bookend_labels
 }
 
 function spacerScreen(text){
+
+    this.ppntID = localStorage.getItem("ppntID"); //copies same attributes as maketrial so you can be lazy and post all responses to the same db table.
+    this.questiontext = "spacer_screen";
     this.text = text;
+    this.hm_options=0;
+    this.bookend_labels="Continue_button_only";
+
     this.drawMe = function(targdiv){
 	var drawstring = "<p>"+this.text+"</p><button onclick='responseListener(\"continue\")'>Continue</button>";
 	document.getElementById(targdiv).innerHTML = drawstring;
@@ -82,7 +89,7 @@ var accfirst = Math.random()<.5;
 var gramstim = stim.slice(0,trials_per_block); //gramm questions
 var accstim = stim.slice(trials_per_block,2*trials_per_block);//acc questions
 
-var gramtrials = [new spacerScreen("This block of questions asks you to judge if a sentence is grammatical or not. It doesn't matter if the sentence is ugly or even makes no sense: please answer 'yes' if it is a valid construction in English or 'No' if it is not.")].concat(gramstim.map(
+var gramtrials = [new spacerScreen("This block of questions asks you to judge if a sentence is grammatical or not. It doesn't matter if the sentence is ugly or even makes no sense: please answer 'Yes' if it is a valid construction in English or 'No' if it is not.")].concat(gramstim.map(
     function(x){return new makeTrial("Is this a valid <em>grammatical</em> English sentence?",
 				     x,
 				     2,
@@ -91,7 +98,7 @@ var gramtrials = [new spacerScreen("This block of questions asks you to judge if
 var acctrials =  [new spacerScreen("This block of questions asks you to judge how acceptable a sentence is. Here 'acceptable' means 'well-formed' or 'natural sounding'. The sentences here range in acceptability from very good to very poor, please use the rating scale to indicate where each sentence falls in this range.")].concat(accstim.map(
     function(x){return new makeTrial("Is this an <em>acceptable</em> English sentence?",
 				     x,
-				     7,
+				     8,
 				     ["Poor","Good"])
 	       }));
 //actually you probably want a spacer block, right?
