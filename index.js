@@ -15,7 +15,7 @@ app.use(favicon(__dirname + '/public/psi.ico')); //You might want to change this
 
 app.use(session({
     cookieName: 'session',
-    secret: process.env.COOKIE_SECRET,
+    secret: "satan_oscillate_my_metallic_sonatas"
     duration: 30 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
 }));

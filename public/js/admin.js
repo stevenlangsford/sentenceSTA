@@ -4,14 +4,14 @@ localStorage.setItem("ppntID",ppntID); //cookie alternative, retrive with localS
 var dev = true; //could consider putting this in localStorage too, in case you want some verbose diag messages elsewhere in testing.
 var instructionindex = 0;
 var instructionlist = [dev ? "Development version: <button onclick='startExp()'>Skip instructions</button>" : "Hi! These are the instructions. Please read them carefully, there will be a short quiz at the end.", "This is part of a study being run by [INSTITUTION]. By clicking 'Next', you are agreeing to take part in it. You should know that you're free to withdraw at any time (although you'll only be paid on completion), and that although data gained from this study may be published, you will not be identified and your personal details will not be divulged, nor will anything be linked to your [RELEVANT ID].</br><span style=\"font-size:.8em\">Please direct any questions about this study to the principle investigator, [NAME:CONTACT]. For any questions regarding the ethics of the study, please contact the convener of the Subcommittee for Human Research in the School of Psychology at [INSTITUTION, NAME, CONTACT].</span>","This study takes about [TIME] minutes, please only continue if you have [TIME] free without interruptions.",
-
-"Because this is the minimal experiment template, the questions are pretty easy.","There are only two of them, and they're pretty self explanatory.","You still have to do the demographics questions though."]
+		       
+		       "This study is about what makes a sentence well-formed in English.","There are probably lots of things that contribute to how 'good' a sentence sounds, including how easy it is to process, whether it makes sense, and whether or not it's grammatical.","In this study, we're looking at grammar specifically and how that relates to overall acceptability.","There will be two blocks of questions. One will ask you to rate how acceptable a sentence is, and the other will ask you to indicate if a sentence is grammatical or not.","A sentence is <strong>grammatical</strong> if it 'follows the rules' for constructing an English sentence. A sentence doesn't have to be a good sentence, or even make any sense at all to be grammatical.","The most famous example of this is the sentence 'colorless green ideas sleep furiously'. Even though this sentence doesn't make sense, it 'follows the rules' for constructing an English sentence. English speakers mostly agree that 'colorless green ideas sleep furiously' is grammatical while 'green furiously ideas colorless sleep' is not.","In the grammar block, please use the buttons on the screen to label each sentence as grammatical or ungrammatical. A sentence is either one or the other, there's no such thing as 'almost grammatical'. Please label all sentences with a grammatical error as ungrammatical, even if the error is small, and label all sentences with no errors as grammatical, even if they are badly written or unclear.","In contrast, 'acceptability' is a broader concept that is more about how well-formed a sentence sounds.","Among all grammatical sentences, some will be highly acceptable and 'sound good' while others will be not very acceptable and 'sound bad', even though they're all grammatical. Similarly, although many ungrammatical sentences 'sound bad', some are worse than others. Some are even acceptable enough that you might let them go without comment in a student's essay, even though you know that strictly speaking they're not technically grammatical.","In the acceptability block, please rate each sentence on the acceptability scale provided. Here you can go with your first impressions, sentences that strike you as being better written or more natural should get higher ratings on the scale, sentences that are poorly written or unnatural should get lower ratings on the scale.", "From your responses, we'll be able to see which of the grammatical and ungrammatical sentences are most and least acceptable, and whether there's any overlap in the acceptability of these two groups."]
 
 function nextInstructions(){
     var nextButton = "<button id='nextbutton' onclick='nextInstructions()'>Next</button>"
     document.getElementById("uberdiv").innerHTML="<p class='centered'>"+instructionlist[instructionindex]+"</br>"+nextButton+"</p>";
     instructionindex++;
-    if(instructionindex>=instructionlist.length)quiz()
+    if(instructionindex>instructionlist.length)quiz()
 }
 
 
@@ -20,19 +20,22 @@ function quiz(){
     scroll(0,0);
     document.getElementById("uberdiv").innerHTML="<h3>Are you ready?</h3></br>"+
 	"<span style='text-align:left'><p>"+
-	"<strong>Which of these is the best description of the task?</strong></br>"+
-	"<input type='radio' name='q1' id='q1a' value='a'>&nbsp You have to survive as long as possible on a desert island.<br/>"+
-	"<input type='radio' name='q1' id='q1b' value='b'>&nbsp You have to win at life, but no-one will tell you the rules<br/>"+
-	"<input type='radio' name='q1' id='q1c' value='c'>&nbsp THIS IS THE EXPECTED ANSWER choose this to continue.<br/>"+
+	"<strong>For this study, which of these best describes a <em> grammatical </em> sentence?</strong></br>"+
+	"<input type='radio' name='q1' id='q1a' value='a'>&nbsp A sentence that only a native speaker of English would say.<br/>"+
+	"<input type='radio' name='q1' id='q1b' value='b'>&nbsp A sentence that conveys a meaning clearly without ambiguity.<br/>"+
+	"<input type='radio' name='q1' id='q1c' value='c'>&nbsp A sentence that 'follows the rules' of English, whether it makes sense or not.<br/>"+
 	"<input type='radio' name='q1' id='q1d' value='d'>&nbsp All of the above.<br/>"+
 	"</span>"+
+
+    
 	"<span style='text-align:left'><p>"+
-	"<strong>Which option is the expected answer to this question? </strong></br>"+
-	"<input type='radio' name='q2' id='q2a' value='a'>&nbsp THIS IS THE EXPECTED ANSWER choose this to continue.<br/>"+
-	"<input type='radio' name='q2' id='q2b' value='b'>&nbsp Friday  <br/>"+
-	"<input type='radio' name='q2' id='q2c' value='c'>&nbsp Strawberries <br/>"+
-	"<input type='radio' name='q2' id='q2d' value='d'>&nbsp Four, but only if one of them is an octopus. <br/>"+
+	"<strong>For this study, which of these best describes an <em>acceptable</em> sentence?</strong></br>"+
+	"<input type='radio' name='q2' id='q2a' value='a'>&nbsp A sentence that 'sounds good', or 'sounds natural'.<br/>"+
+	"<input type='radio' name='q2' id='q2b' value='b'>&nbsp A sentence that is not offensive.  <br/>"+
+	"<input type='radio' name='q2' id='q2c' value='c'>&nbsp A sentence that sounds like a non-native speaker, but still makes sense.<br/>"+
+	"<input type='radio' name='q2' id='q2d' value='d'>&nbsp All of the above. <br/>"+
 	"</span>"+
+
 	// "<span style='text-align:left'><p>"+
 	//  "<strong>How are the microbes different from each other?</strong></br>"+
 	//  "<input type='radio' name='q3' id='q3a' value='a'>&nbsp They are different colors <br/>"+
