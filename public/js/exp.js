@@ -25,6 +25,8 @@ function responseListener(aresponse){//global so it'll be just sitting here avai
 function nextTrial(){
     if(trialindex<trials.length){
 	trials[trialindex].drawMe("uberdiv");
+	setTimeout(function(){Array.from(document.getElementsByClassName('responsebutton'),function(x){x.disabled=false})},
+		   1000);
     }else{
 	$.post("/finish",function(data){window.location.replace(data)});
     }
@@ -43,12 +45,17 @@ function makeTrial(questiontext,targetsentence, hm_options,option_bookend_labels
 
     this.drawMe = function(targdiv){
 	this.drawTime = Date.now();
-	var drawstring ="<h2>"+this.questiontext+"</h2>"+"<p class='centered' id='targtext'>"+targetsentence+"</p><div class='centered' id='responseoptions' >"+this.bookend_labels[0];
-	for(var i =0;i<hm_options;i++){
-	    drawstring+="&nbsp&nbsp<button onclick='responseListener(\""+i+"\")'>O</button>&nbsp&nbsp"
+	var drawstring = "<h2>"+this.questiontext+"</h2>"+"<p class='centered' id='targtext'>"+targetsentence+"</p>"+
+	    "<table class='centered' width='70%'><tr>"
+		for(var i =0;i<hm_options;i++){
+		    drawstring+="<td><button class='responsebutton' onclick='responseListener(\""+i+"\")' disabled=true>O</button></td>";
+		}
+	drawstring+="</tr>"+
+	    "<tr><td colspan="+hm_options+">&nbsp</td></tr><tr>";
+	for(var i =0;i<option_bookend_labels.length;i++){
+	    drawstring+="<td>"+option_bookend_labels[i]+"</td>";
 	}
-	drawstring+=""+this.bookend_labels[1];
-
+	drawstring+="</tr></table>";
 	document.getElementById(targdiv).innerHTML=drawstring;
     }
 }
@@ -92,14 +99,14 @@ var accstim = stim.slice(trials_per_block,2*trials_per_block);//acc questions
 var gramtrials = [new spacerScreen("This block of questions asks you to judge if a sentence is grammatical or not. It doesn't matter if the sentence is ugly or even makes no sense: please answer 'Yes' if it is a valid construction in English or 'No' if it is not.")].concat(gramstim.map(
     function(x){return new makeTrial("Is this a valid <em>grammatical</em> English sentence?",
 				     x,
-				     2,
-				     ["No","Yes"])
+				     6,
+				     ["Definitely </br>not grammatical", "Probably </br>not grammatical", "Possibly </br>not grammatical", "Possibly </br>grammatical", "Probably </br>grammatical", "Definitely </br>grammatical"])
 	       }));
 var acctrials =  [new spacerScreen("This block of questions asks you to judge how acceptable a sentence is. Here 'acceptable' means 'well-formed' or 'natural sounding'. The sentences here range in acceptability from very good to very poor, please use the rating scale to indicate where each sentence falls in this range.")].concat(accstim.map(
     function(x){return new makeTrial("Is this an <em>acceptable</em> English sentence?",
 				     x,
-				     8,
-				     ["Poor","Good"])
+				     6,
+				     ["Highly </br>unacceptable", "Unacceptable", "Somewhat </br>unacceptable", "Somewhat </br>acceptable", "Acceptable", "Highly </br>acceptable"])
 	       }));
 //actually you probably want a spacer block, right?
 trials = accfirst ? acctrials.concat(gramtrials) : gramtrials.concat(acctrials)
