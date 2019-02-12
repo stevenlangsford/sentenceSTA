@@ -1,0 +1,10 @@
+library(tidyverse)
+rm(list=ls()) #to remove
+
+demographics.df <- read.csv("raw/demographicsdata.csv")
+
+responses.df <- read.csv("raw/sentenceresponsedata.csv")
+##TODO: exclusions. Attn checks are in grammatical judgment block, "Sarah expected to get a good grade" and "
+attncheck_goodsentence <- responses.df%>%filter(text=="Sarah expected to get a good grade.")
+attncheck_badsentece <- responses.df%>%filter(text=="Him would have been fired.")
+
