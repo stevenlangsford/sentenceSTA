@@ -96,6 +96,8 @@ var accfirst = Math.random()<.5;
 var gramstim = stim.slice(0,trials_per_block); //gramm questions
 var accstim = stim.slice(trials_per_block,2*trials_per_block);//acc questions
 
+gramstim = gramstim.concat(["Sarah expected to get a good grade.","Him would have been fired."]); //Attention checks, everyone sees these. 1 good, one bad, must get these right to be included.
+
 var gramtrials = [new spacerScreen("This block of questions asks you to judge if a sentence is grammatical or not. It doesn't matter if the sentence is ugly or even makes no sense: please answer 'Yes' if it is a valid construction in English or 'No' if it is not.")].concat(gramstim.map(
     function(x){return new makeTrial("Is this a valid <em>grammatical</em> English sentence?",
 				     x,
