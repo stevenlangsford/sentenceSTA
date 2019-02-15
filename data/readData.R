@@ -1,7 +1,6 @@
 library(tidyverse)
 library(patchwork)
 theme_set(theme_light())
-rm(list=ls()) #to remove
 
 demographics.df <- read.csv("raw/demographicsdata.csv")
 
@@ -31,9 +30,12 @@ responses.df <- responses.df%>%filter(text!="Sarah expected to get a good grade.
 apriori.df <- read.csv("stimcollection1.csv")
 responses.df$canon_status <- unlist(sapply(responses.df$text,function(x){return(apriori.df[as.character(apriori.df$sentence)==as.character(x),"grammatical"])}))
 
-#ggplot(responses.df,aes(x=response))+geom_histogram()+facet_wrap(~questiontext)+
-ggsave(ggplot(responses.df,aes(x=response,fill=canon_status))+geom_bar(position="dodge")+facet_wrap(~questiontext),file="pilot1.png")
+byitem.df <- responses.df%>%
+    group_by(questiontext,text)%>%
+    summarize(mean_response=mean(response),count=n()) #just taking the mean like this possibly not ideal! You're in raw likert land, consider standardizing by ppnt (iff that doesn't muddy the waters too much re state trace / comparisons between acc and gram patterns? Also, some of these are probably error-detected/error-missed mixtures! Might be important.
 
-repeats <- responses.df%>%group_by(text)%>%summarize(count=n())%>%filter(count>=2)#unneccessary with full coverage n! Everything should be repeated a bunch of times.
-avsg.df <- responses.df%>%filter(text%in%repeats$text)%>%group_by(questiontext,text)%>%summarize(mean_response=mean(response))
-#GATHER by sentence, a row should be sentence: gramscore, accscore, canonical_status. Question: norm responses by ppnt first? hmmm. maybe not, this time?
+
+ratingtypes.df <- byitem.df%>%select(-count)%>%spread(questiontext,mean_response)%>%left_join(responses.df%>%select(text,canon_status),by="text")
+names(ratingtypes.df) <- c("text","acceptable","grammatical","canonical")#just getting rid of the ? marks after Acceptable and Grammatical
+
+write.csv(ratingtypes.df,file="threeratingtypes.csv",row.names=FALSE)

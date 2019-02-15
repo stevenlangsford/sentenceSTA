@@ -1,0 +1,4 @@
+
+source("readData.R")
+##ggplot(responses.df,aes(x=response))+geom_histogram()+facet_wrap(~questiontext)+
+ggsave(ggplot(responses.df,aes(x=response,fill=canon_status))+geom_bar(position="dodge")+facet_wrap(~questiontext),file="pilot1.png")
