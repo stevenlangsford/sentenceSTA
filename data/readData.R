@@ -29,6 +29,7 @@ responses.df <- responses.df%>%filter(text!="Sarah expected to get a good grade.
 ##add canonical status:
 apriori.df <- read.csv("stimcollection1.csv")
 responses.df$canon_status <- unlist(sapply(responses.df$text,function(x){return(apriori.df[as.character(apriori.df$sentence)==as.character(x),"grammatical"])}))
+responses.df$stim_type <- unlist(sapply(responses.df$text,function(x){return(apriori.df[as.character(apriori.df$sentence)==as.character(x),"sentenceType"])}))
 
 byitem.df <- responses.df%>%
     group_by(questiontext,text)%>%

@@ -1,421 +1,61 @@
 "text","acceptable","grammatical","canonical"
-"A gambler without a system has ever finished ahead. ",1,NA,FALSE
-"All of the garden forks with wooden handles ever have more than four tines.",1,NA,FALSE
-"All the postal workers seem to have all taken a break at the same time.",5,3,FALSE
-"All the postal workers seem to have all taken a break at the same time.",5,3,FALSE
-"A man ate any spinach.",NA,1,FALSE
-"Amanda hinted to Jack there will be a pop quiz on Monday.",NA,4,FALSE
-"A man other than the vegetarian ate any spinach.",4,2,FALSE
-"A man other than the vegetarian ate any spinach.",4,2,FALSE
-"A performance not involving this style of mask has ever been traditional on Palau.",NA,4,FALSE
-"A pirate with no beard has ever beaten me at cards.",1,2,FALSE
-"A pirate with no beard has ever beaten me at cards.",1,2,FALSE
-"A pirate with no beard has ever beaten me at cards.",1,2,FALSE
-"Ashley suggested to Michael he should throw a party.",4,4,FALSE
-"Ashley suggested to Michael he should throw a party.",4,4,FALSE
-"At Peter's party more toddlers ate a tasty strawberry cupcake than the high schooler did.",3,5,FALSE
-"At Peter's party more toddlers ate a tasty strawberry cupcake than the high schooler did.",3,5,FALSE
-"At the new cafe more women tried a new green tea drink than the reluctant man did.",NA,3,FALSE
-"At the party more seniors were talking with the professors than juniors were.",NA,4,TRUE
-"At the party more seniors were talking with the professors than the junior was.",2,NA,FALSE
-"Before exams ended more undergrads handed in a final paper than grad students did.",NA,4,TRUE
-"Before exams ended more undergrads handed in a final paper than the grad student did.",NA,2,FALSE
-"Ben is hopeful for everyone to attend that you are.",1,NA,TRUE
-"Ben is hopeful for everyone to attend that you are.",1,NA,TRUE
-"Brent signaled to Samantha to excuse himself.",NA,4,FALSE
-"Brent signaled to Samantha to excuse himself.",NA,4,FALSE
-"By 5 o'clock more busy telemarketers had taken an easy call than lazy telemarketers did.",3,4,TRUE
-"By 5 o'clock more busy telemarketers had taken an easy call than lazy telemarketers did.",3,4,TRUE
-"By 5 o'clock more busy telemarketers had taken an easy call than the lazy telemarketer did.",NA,5,FALSE
-"Dana hopes for everyone to succeed that you do.",NA,4,TRUE
-"Down which street drove two cars?",3,NA,TRUE
-"During that war more middle-aged Alabamans were exposed to combat than the young Alaskan was.",NA,2.5,FALSE
-"During that war more middle-aged Alabamans were exposed to combat than the young Alaskan was.",NA,2.5,FALSE
-"During that war more middle-aged Alabamans were exposed to combat than young Alaskans were.",NA,4,TRUE
-"Each performance involving this style of mask has ever been traditional on Palau.",3,NA,FALSE
-"Every pirate with no beard has ever beaten me at cards.",3,NA,FALSE
-"Every superhero with a cape has ever missed a chance to flaunt  it.",NA,1,FALSE
-"Few islands that have ground birds have any rats.",NA,4,TRUE
-"Greg put more onions in the soup than Lana did in the salad.",4.33333333333333,NA,FALSE
-"Greg put more onions in the soup than Lana did in the salad.",4.33333333333333,NA,FALSE
-"Greg put more onions in the soup than Lana did in the salad.",4.33333333333333,NA,FALSE
-"I anticipate that everybody will visit Jack that you do.",NA,2,TRUE
-"I anticipate that everybody will watch Melissa that you do.",3.5,NA,TRUE
-"I anticipate that everybody will watch Melissa that you do.",3.5,NA,TRUE
-"I anticipate that everyone will see John that you do.",NA,1,TRUE
-"I believed a friend of Andy satisfied.",NA,1.33333333333333,TRUE
-"I believed a friend of Andy satisfied.",NA,1.33333333333333,TRUE
-"I believed a friend of Andy satisfied.",NA,1.33333333333333,TRUE
-"I expect that everyone will praise Ricky that you do.",2,NA,TRUE
-"I expect that everyone will visit Mary that you do.",1,NA,TRUE
-"In cooking class more international students were baking butter scones than American students were.",3,NA,TRUE
-"In cooking class more international students were baking butter scones than the American student was.",NA,3,FALSE
-"In September more New Yorkers attended law school than Candace did all of last year.",2.66666666666667,NA,FALSE
-"In September more New Yorkers attended law school than Candace did all of last year.",2.66666666666667,NA,FALSE
-"In September more New Yorkers attended law school than Candace did all of last year.",2.66666666666667,NA,FALSE
+"Amanda hinted to Jack there will be a pop quiz on Monday.",5,NA,FALSE
+"Ashley suggested to Michael he should throw a party.",NA,5,FALSE
+"A superhero without a cape has ever missed a chance to flaunt  it.",1,NA,FALSE
+"At Peter's party more toddlers ate a tasty strawberry cupcake than high schoolers did.",NA,5,TRUE
+"At the bridal shower more family members drank a tall glass of champagne than Fiona did.",NA,1,FALSE
+"At the new cafe more women tried a new green tea drink than the reluctant man did.",2,NA,FALSE
+"During that war more middle-aged Alabamans were exposed to combat than the young Alaskan was.",NA,0,FALSE
+"Each performance involving this style of mask has ever been traditional on Palau.",NA,0,FALSE
+"Emma thought for a moment her friend was at the door.",5,NA,FALSE
+"Everyone who believed ever said so much as a word about it.",0,NA,FALSE
+"Few islands that have ground birds have any rats.",NA,5,TRUE
+"I anticipate that everybody will watch Melissa that you do.",1,NA,TRUE
+"I anticipate that everyone will see John that you do.",4,NA,TRUE
+"In English class more girls wrote a charming haiku than boys did.",4,NA,TRUE
+"In September more New Yorkers attended law school than Candace did all of last year.",NA,0,FALSE
 "It seemed at that time Adam had been fired.",NA,4,FALSE
-"It seemed at that time Mark had quit.",4,NA,FALSE
-"Jessica saw on the news Michael Jackson died.",NA,3,FALSE
-"Joan bought a last year house next to the house that Erin did.",NA,1,TRUE
-"John believes without a doubt his team will win.",NA,4,FALSE
-"John wants for everyone to have fun that you do.",1,NA,TRUE
-"Judah confirmed that this jersey he can keep.",NA,4,TRUE
-"Kyle expects for everyone to be honest that you do.",3.5,4,TRUE
-"Kyle expects for everyone to be honest that you do.",3.5,4,TRUE
-"Kyle expects for everyone to be honest that you do.",3.5,4,TRUE
-"Larry cooked her husband the meal.",NA,5,TRUE
-"Last month more lawyers were writing their big report than the company executive was.",2,NA,FALSE
-"Last summer more famous bands had a big stadium show than lesser-known bands did.",NA,3.5,TRUE
-"Last summer more famous bands had a big stadium show than lesser-known bands did.",NA,3.5,TRUE
-"Last summer more famous bands had a big stadium show than the lesser-known band did.",3,4,FALSE
-"Last summer more famous bands had a big stadium show than the lesser-known band did.",3,4,FALSE
-"Last week more History majors continued writing their literature essay than English majors did.",3,3.5,TRUE
-"Last week more History majors continued writing their literature essay than English majors did.",3,3.5,TRUE
-"Last week more History majors continued writing their literature essay than English majors did.",3,3.5,TRUE
-"Last week more History majors continued writing their literature essay than the English major did.",NA,1,FALSE
-"Last year more professional writers published an acclaimed novel than the amateur author did.",5,4.5,FALSE
-"Last year more professional writers published an acclaimed novel than the amateur author did.",5,4.5,FALSE
-"Last year more professional writers published an acclaimed novel than the amateur author did.",5,4.5,FALSE
-"Last year more young people were reading War & Peace than old men were.",3,NA,TRUE
-"Last year more young people were reading War & Peace than the old man was.",2.5,4,FALSE
-"Last year more young people were reading War & Peace than the old man was.",2.5,4,FALSE
-"Last year more young people were reading War & Peace than the old man was.",2.5,4,FALSE
-"Leslie is certain that these clothes Harold will wash.",2,NA,TRUE
-"Many cricket players who are not from Australia have ever run faster than Ponting.",2,NA,FALSE
-"Many musicians who never played sitar ever recorded their most popular works.",1,NA,FALSE
-"Mark sailed the Caribbean and Cathy flew to the Mediterranean.",NA,1,FALSE
-"Mary believed that Peter finished school and Bill that Peter got a job.",1,NA,TRUE
-"Most calligraphy by Mi Fu ever bears that particular seal.",1,NA,FALSE
-"Most calligraphy by Mi Fu ever bears that particular seal.",1,NA,FALSE
-"Most calligraphy not by Mi Fu ever bears that particular seal.",4,NA,FALSE
-"Most cricket players from Australia have ever run faster than Ponting.",2,NA,FALSE
-"Most gamblers with a system have ever finished ahead.",2,NA,FALSE
-"Natalie pushed the window opened.",3,NA,FALSE
-"No authors that the critics recommended have received any acknowledgement for a best selling novel.",NA,5,TRUE
-"Nobody other than the vegetarian ate any spinach.",5,NA,TRUE
-"Nobody who believed ever said so much as a word about it.",NA,4,TRUE
-"Nobody who believed ever said so much as a word about it.",NA,4,TRUE
-"No cake that the children found had any chance of surviving the week.",4,NA,TRUE
-"No cricket player from Australia has ever run faster than Ponting.",NA,5,TRUE
-"None of the garden forks with wooden handles ever have more than four tines.",NA,2.33333333333333,TRUE
-"None of the garden forks with wooden handles ever have more than four tines.",NA,2.33333333333333,TRUE
-"None of the garden forks with wooden handles ever have more than four tines.",NA,2.33333333333333,TRUE
-"No party that was organized by the journalists had any problems with catering.",NA,5,TRUE
-"No restaurants that local newspapers have recommended in their dining reviews have ever gone out of business.",4,1,TRUE
-"No restaurants that local newspapers have recommended in their dining reviews have ever gone out of business.",4,1,TRUE
-"No singer that the venue hosted had any problem selling tickets.",4,NA,TRUE
-"Not many musicians who could play sitar ever recorded their most popular works.",4,NA,TRUE
-"No voice actors who do major cartoons get any fans approaching them in the street.",3,4,TRUE
-"No voice actors who do major cartoons get any fans approaching them in the street.",3,4,TRUE
-"Only a mad captain with a plan ever gives that order.",NA,5,TRUE
-"Over the weekend more boys worked on the assignment than girls did.",3,NA,TRUE
-"Over the weekend more boys worked on the assignment than Jenna did.",4,5,FALSE
-"Over the weekend more boys worked on the assignment than Jenna did.",4,5,FALSE
-"Raymond believed that Amy practiced her music and Danielle that Amy won a competition.",2,0,TRUE
-"Raymond believed that Amy practiced her music and Danielle that Amy won a competition.",2,0,TRUE
-"Sarah gave more children than Susan did candy.",NA,3.66666666666667,TRUE
-"Sarah gave more children than Susan did candy.",NA,3.66666666666667,TRUE
-"Sarah gave more children than Susan did candy.",NA,3.66666666666667,TRUE
-"Someone who didn’t believe ever said so much as a word about it.",NA,1,FALSE
-"Some swim instructors with experience would ever recommend underwater distance training.",NA,1,FALSE
-"Some swim instructors without experience would ever recommend underwater distance training.",1,NA,FALSE
-"Sophia is anxious for everyone to arrive that you are.",0,NA,TRUE
-"That Addison bit the boy, Jena didn’t believe.",NA,2,TRUE
-"That Mike pushed the little girl, Bianca didn’t believe.",NA,2,TRUE
-"That movie impossible to watch without enjoying.",NA,0,TRUE
+"John believes without a doubt his team will win.",NA,5,FALSE
+"Last summer more famous bands had a big stadium show than lesser-known bands did.",5,NA,TRUE
+"Last year more professional writers published an acclaimed novel than amateur authors did.",1,NA,TRUE
+"Nobody who believed ever said so much as a word about it.",5,NA,TRUE
+"No camel breeders from Bikaner have received any prizes that season.",NA,5,TRUE
+"No cricket player from Australia has ever run faster than Ponting.",5,NA,TRUE
+"No superhero with a cape has ever missed a chance to flaunt it.",NA,5,TRUE
+"No voice actors who do major cartoons get any fans approaching them in the street.",5,NA,TRUE
 "That week more female students handed in a short term paper than male students did.",NA,5,TRUE
-"That week more female students handed in a short term paper than the male student did.",1,NA,FALSE
-"That week more German architects continued working on a big project than French architects did.",3,NA,TRUE
-"That week more German architects continued working on a big project than the French architect did.",NA,4,FALSE
-"The actor hired to do the commercial is boring and uninspired.",1,5,TRUE
-"The actor hired to do the commercial is boring and uninspired.",1,5,TRUE
-"The actors hired to do the commercials are boring and uninspired.",5,5,TRUE
-"The actors hired to do the commercials are boring and uninspired.",5,5,TRUE
-"The ancient manuscript that the grad student who the new card catalog had confused a great deal was missing a page.",NA,0,FALSE
-"The ancient manuscript that the grad student who the new card catalog had confused a great deal was studying in the library.",NA,0,FALSE
-"The ancient manuscript that the grad student who the new card catalog had confused a great deal was studying in the library was missing a page.",4,1,TRUE
-"The ancient manuscript that the grad student who the new card catalog had confused a great deal was studying in the library was missing a page.",4,1,TRUE
-"The ancient manuscript that the grad student who the new card catalog had confused a great deal was studying in the library was missing a page.",4,1,TRUE
-"The ancient manuscript that the grad student who the new card catalog was studying in the library was missing a page.",1,0,FALSE
-"The ancient manuscript that the grad student who the new card catalog was studying in the library was missing a page.",1,0,FALSE
-"The artist who the computer that the guard shouted at annoyed instructed the newscaster.",NA,1,FALSE
-"The artist who the computer that the guard shouted at annoyed instructed the newscaster.",NA,1,FALSE
-"The artist who the computer that the guard shouted at instructed the newscaster.",1,NA,FALSE
-"The artist who the sportsman that the guard shouted at annoyed instructed the newscaster.",2,NA,TRUE
-"The artist who the sportsman that the guard shouted at instructed the newscaster.",1,NA,FALSE
-"The astronomers that discovered the most distant galaxies are now famous.",5,NA,TRUE
-"The astronomers that discovered the most distant galaxy is now famous.",NA,0,FALSE
-"The authors that the critics recommended have received any acknowledgement for a best selling novel.",5,NA,FALSE
-"The bed was slept in wearing no clothes.",1,0,TRUE
-"The bed was slept in wearing no clothes.",1,0,TRUE
-"The boys that liked the colorful garter snakes hide motionless behind a tree.",1,NA,TRUE
-"The boy that liked the colorful garter snakes hide motionless behind a tree.",2,NA,FALSE
-"The bridges to the island is very crowded.",NA,2,FALSE
-"The bridges to the island is very crowded.",NA,2,FALSE
-"The bridges to the islands are very crowded.",4.5,NA,TRUE
-"The bridges to the islands are very crowded.",4.5,NA,TRUE
-"The bridge to the islands are very crowded.",4,NA,FALSE
-"The cake that the children didn’t find had any chance of surviving the week.",3,2.33333333333333,FALSE
-"The cake that the children didn’t find had any chance of surviving the week.",3,2.33333333333333,FALSE
-"The cake that the children didn’t find had any chance of surviving the week.",3,2.33333333333333,FALSE
-"The cake that the children didn’t find had any chance of surviving the week.",3,2.33333333333333,FALSE
-"The cake that the children didn’t find had any chance of surviving the week.",3,2.33333333333333,FALSE
-"The cake that the children found had any chance of surviving the week.",2,NA,FALSE
-"The cake that the children found had any chance of surviving the week.",2,NA,FALSE
-"The camel breeders not from Bikaner have received any prizes that season.",NA,1,FALSE
-"The carpenter who the craftsman that the peasant carried supervised the apprentice.",1,NA,FALSE
-"The carpenter who the pillar that the peasant carried hurt supervised the apprentice.",1,2,FALSE
-"The carpenter who the pillar that the peasant carried hurt supervised the apprentice.",1,2,FALSE
-"The carpenter who the pillar that the peasant carried supervised the apprentice.",NA,2,FALSE
-"The carpenter who the pillar that the peasant carried supervised the apprentice.",NA,2,FALSE
-"The car was driven while being tired.",NA,1,TRUE
-"The checks from the indicted Wall Street stockbroker bounces, as you expected.",5,NA,FALSE
-"The checks from the indicted Wall Street stockbrokers bounce, as you expected.",1,NA,TRUE
-"The cleaner who the ball that the doctor recognised surprised the patient.",1,NA,FALSE
-"The cleaner who the janitor that the doctor recognised hurt surprised the patient.",NA,4,TRUE
-"The cleaner who the janitor that the doctor recognised surprised the patient.",NA,2,FALSE
-"The clerk who the walking stick that the visitor forgotten about annoyed the neighbour.",NA,0,FALSE
-"The clerk who the walking stick that the visitor forgotten about helped annoyed the neighbour.",NA,1,FALSE
-"The club was entered wearing no shirt.",NA,3,TRUE
-"The club was entered wearing no shirt.",NA,3,TRUE
-"The club was entered wearing no shirt.",NA,3,TRUE
-"The computer installed in the missiles are less powerful than your phone.",4,2.5,FALSE
-"The computer installed in the missiles are less powerful than your phone.",4,2.5,FALSE
-"The computer installed in the missiles are less powerful than your phone.",4,2.5,FALSE
-"The computers installed in the missile are less powerful than your phone.",4,NA,TRUE
-"The computers installed in the missile is less powerful than your phone.",NA,0,FALSE
+"That week more German architects continued working on a big project than the French architect did.",1,NA,FALSE
+"The authors that no critics recommended have received any acknowledgement for a best selling novel.",0,NA,FALSE
+"The cake that the children didn’t find had any chance of surviving the week.",NA,1,FALSE
+"The carpenter who the craftsman that the peasant carried hurt supervised the apprentice.",1,NA,TRUE
+"The computer installed in the missiles are less powerful than your phone.",1,NA,FALSE
+"The conductor who the choirmaster that the worker ignored berated the musician.",1,NA,FALSE
 "The conductor who the choirmaster that the worker ignored hit berated the musician.",1,NA,TRUE
-"The conductor who the sponge that the worker ignored hit berated the musician.",NA,3,FALSE
-"The cousin who the brother that the peasant described hated the uncle.",NA,1,FALSE
-"The cousin who the brother that the peasant described pleased hated the uncle.",NA,1,TRUE
-"The cousin who the diamond that the peasant described hated the uncle.",NA,1,FALSE
-"The crimes that troubled the detectives were not what what you might expect.",4,3,TRUE
-"The crimes that troubled the detectives were not what what you might expect.",4,3,TRUE
-"The crimes that troubled the detective was not what you might expect.",3,1,FALSE
-"The crimes that troubled the detective was not what you might expect.",3,1,FALSE
-"The crime that the gangster who the story had planned for weeks was quickly solved.",2,1,FALSE
-"The crime that the gangster who the story had planned for weeks was quickly solved.",2,1,FALSE
-"The crime that the gangster who the story had profiled was quickly solved.",1,NA,FALSE
-"The crime that the gangster who the story had profiled was quickly solved.",1,NA,FALSE
-"The dancer who the shoe that the bystander admired hurt tipped the doorman.",1,NA,FALSE
-"The dancer who the singer that the bystander admired hurt tipped the doorman.",2.5,NA,TRUE
-"The dancer who the singer that the bystander admired hurt tipped the doorman.",2.5,NA,TRUE
-"The defect in the car is not obvious except to experts.",4,5,TRUE
-"The defect in the car is not obvious except to experts.",4,5,TRUE
-"The defect in the cars are not obvious except to experts.",NA,2,FALSE
-"The defects in the cars are not obvious except to experts.",NA,4,TRUE
-"The defence who the knife that the spy looked at convinced the judge.",NA,3.5,FALSE
-"The defence who the knife that the spy looked at convinced the judge.",NA,3.5,FALSE
-"The defence who the knife that the spy looked at surprised convinced the judge.",1,2.33333333333333,FALSE
-"The defence who the knife that the spy looked at surprised convinced the judge.",1,2.33333333333333,FALSE
-"The defence who the knife that the spy looked at surprised convinced the judge.",1,2.33333333333333,FALSE
-"The defence who the knife that the spy looked at surprised convinced the judge.",1,2.33333333333333,FALSE
-"The defence who the prosecutor that the spy looked at convinced the judge.",1,4,FALSE
-"The defence who the prosecutor that the spy looked at convinced the judge.",1,4,FALSE
-"The defence who the prosecutor that the spy looked at surprised convinced the judge.",NA,2,TRUE
-"The detectives who solved the murders are at the door.",NA,5,TRUE
-"The detectives who solved the murders is at the door.",2,2,FALSE
-"The detectives who solved the murders is at the door.",2,2,FALSE
-"The detectives who solved the murders is at the door.",2,2,FALSE
-"The detective who solved the murder is at the door.",5,3,TRUE
-"The detective who solved the murder is at the door.",5,3,TRUE
-"The detective who solved the murders are at the door.",2,1,FALSE
-"The detective who solved the murders are at the door.",2,1,FALSE
-"The dogs that chased the truck is very muddy.",NA,2,FALSE
-"The dog that chased the truck is very muddy.",NA,4.5,TRUE
-"The dog that chased the truck is very muddy.",NA,4.5,TRUE
-"The dog that chased the trucks are very muddy.",2,NA,FALSE
-"The doors to the President’s private offices are rarely open.",NA,5,TRUE
-"The door to the President’s private office is rarely open.",NA,5,TRUE
-"The door to the President’s private offices are rarely open.",5,NA,FALSE
-"The entrances to the world-famous biology laboratories are visible from the street.",5,5,TRUE
-"The entrances to the world-famous biology laboratories are visible from the street.",5,5,TRUE
-"The entrances to the world-famous biology laboratories are visible from the street.",5,5,TRUE
-"The entrances to the world-famous biology laboratory is visible from the street.",5,0,FALSE
-"The entrances to the world-famous biology laboratory is visible from the street.",5,0,FALSE
-"The entrance to the world-famous biology laboratories are visible from the street.",NA,4,FALSE
-"The entrance to the world-famous biology laboratory is visible from the street.",5,NA,TRUE
-"The entrance to the world-famous biology laboratory is visible from the street.",5,NA,TRUE
-"The entrance to the world-famous biology laboratory is visible from the street.",5,NA,TRUE
-"The game that the child who the lawnmower had startled in the yard lasted for hours.",3,NA,FALSE
-"The game that the child who the lawnmower had startled in the yard was playing in the morning lasted for hours.",1,NA,TRUE
-"The game that the child who the lawnmower was playing in the morning lasted for hours.",4,NA,FALSE
-"The girls that the science teachers questioned were nervous.",NA,4,TRUE
-"The girl that the science teacher questioned was nervous.",5,5,TRUE
-"The girl that the science teacher questioned was nervous.",5,5,TRUE
-"The girl that the science teachers questioned were nervous.",1,NA,FALSE
-"The guard employed for the arms-reduction treaty signing ceremonies were from a neutral third country.",3,1,FALSE
-"The guard employed for the arms-reduction treaty signing ceremonies were from a neutral third country.",3,1,FALSE
-"The guard employed for the arms-reduction treaty signing ceremonies were from a neutral third country.",3,1,FALSE
-"The guards employed for the arms-reduction treaty signing ceremonies were from a neutral third country.",NA,4,TRUE
-"The instructor put more solutions on the board than the TA did on the handout.",4,NA,FALSE
-"The keys to the cabinet are on the table.",NA,5,TRUE
-"The keys to the cabinet is on the table.",3,1,FALSE
-"The keys to the cabinet is on the table.",3,1,FALSE
-"The keys to the cabinet is on the table.",3,1,FALSE
-"The key to the cabinet is on the table.",5,5,TRUE
-"The key to the cabinet is on the table.",5,5,TRUE
-"The key to the cabinets are on the table.",NA,0.5,FALSE
-"The key to the cabinets are on the table.",NA,0.5,FALSE
-"The labels on the bottles are quite hard to read.",5,NA,TRUE
-"The lecture that the professor who the newspaper story had just profiled in detail was teaching poorly.",NA,1,FALSE
-"The lecture that the professor who the newspaper story had just profiled in detail was teaching poorly was not well attended.",1.5,NA,TRUE
-"The lecture that the professor who the newspaper story had just profiled in detail was teaching poorly was not well attended.",1.5,NA,TRUE
-"The lecture that the professor who the newspaper story was teaching poorly was not well attended.",NA,1,FALSE
-"The letter from the real estate company’s lawyers are short and polite.",5,2,FALSE
-"The letter from the real estate company’s lawyers are short and polite.",5,2,FALSE
-"The letter from the real estate company’s lawyers are short and polite.",5,2,FALSE
-"The lullaby that the famous country singer who the record label had signed to a big contract was singing yesterday.",1,NA,FALSE
-"The mad captain with a plan ever gives that order.",NA,3,FALSE
-"The main advantage of microchipping your pet is that few pets with microchips are ever lost for long.",4,NA,TRUE
-"The main advantage of microchipping your pet is that pets with microchips are ever lost for long.",NA,1,FALSE
-"The main advantage of microchipping your pet is that pets without microchips are ever lost for long.",3,1,FALSE
-"The main advantage of microchipping your pet is that pets without microchips are ever lost for long.",3,1,FALSE
-"The mechanics who repaired the limousine’s rear tire is in a feud with my cousin’s friend’s family.",4,NA,FALSE
-"The mechanic who repaired the limousine’s rear tire is in a feud with my cousin’s friend’s family.",5,5,TRUE
-"The mechanic who repaired the limousine’s rear tire is in a feud with my cousin’s friend’s family.",5,5,TRUE
-"The mechanic who repaired the limousine’s rear tires are in a feud with my cousin’s friend’s family.",NA,0,FALSE
-"The memo from the accountant flutters to the floor unnoticed.",3,4,TRUE
-"The memo from the accountant flutters to the floor unnoticed.",3,4,TRUE
+"The crime that troubled the detective was not what you might expect.",4,NA,TRUE
+"The dancer who the singer that the bystander admired hurt tipped the doorman.",NA,1,TRUE
+"The defect in the car is not obvious except to experts.",NA,5,TRUE
+"The game that the child who the lawnmower had startled in the yard lasted for hours.",NA,1,FALSE
+"The game that the child who the lawnmower had startled in the yard was playing in the morning lasted for hours.",NA,4,TRUE
+"The keys to the cabinet is on the table.",NA,0,FALSE
 "The memos from the accountants flutter to the floor unnoticed.",4,NA,TRUE
-"The mistake in the programs are small but important.",NA,0,FALSE
-"The mistakes in the programs are small but important.",NA,5,TRUE
-"The monologue that the actor who the movie industry had snubbed repeatedly was extremely well written.",NA,3,FALSE
-"The monologue that the actor who the movie industry had snubbed repeatedly was performing last month.",NA,1,FALSE
-"The monologue that the actor who the movie industry had snubbed repeatedly was performing last month was extremely well written.",2,3,TRUE
-"The monologue that the actor who the movie industry had snubbed repeatedly was performing last month was extremely well written.",2,3,TRUE
-"The monologue that the actor who the movie industry was performing last month was extremely well written.",1,NA,FALSE
-"The mother who the daughter that the sister found greeted the grandmother.",3,0,FALSE
-"The mother who the daughter that the sister found greeted the grandmother.",3,0,FALSE
-"The mother who the gun that the sister found frightened greeted the grandmother.",NA,2,FALSE
-"The mother who the gun that the sister found frightened greeted the grandmother.",NA,2,FALSE
-"The name on the enormous highway billboard belongs to a local real-estate agent.",4,NA,TRUE
-"The names on the enormous highway billboards belongs to a local real-estate agent.",5,NA,FALSE
-"The names on the enormous highway billboards belong to a local real-estate agent.",5,NA,TRUE
-"The novel that the horror author who the publishing company had recently fired had typed quickly.",2,NA,FALSE
-"The novel that the horror author who the publishing company had recently fired had typed quickly was banned by the local library.",NA,4,TRUE
-"The novel that the horror author who the publishing company had recently fired was banned by the local library.",NA,0,FALSE
-"The painter who the film that the friend liked disturbed admired the poet.",NA,1,FALSE
-"The painter who the hut that the father missed cooked for the artist.",3,NA,FALSE
-"The painter who the musician that the father missed cooked for the artist.",2.5,3,FALSE
-"The painter who the musician that the father missed cooked for the artist.",2.5,3,FALSE
-"The painter who the musician that the father missed cooked for the artist.",2.5,3,FALSE
-"The painter who the musician that the father missed cooked for the artist.",2.5,3,FALSE
-"The painter who the musician that the father missed sheltered cooked for the artist.",0.333333333333333,NA,TRUE
-"The painter who the musician that the father missed sheltered cooked for the artist.",0.333333333333333,NA,TRUE
-"The painter who the musician that the father missed sheltered cooked for the artist.",0.333333333333333,NA,TRUE
-"The painter who the musician that the friend liked admired the poet.",2.5,NA,FALSE
-"The painter who the musician that the friend liked admired the poet.",2.5,NA,FALSE
-"The papers were graded while being bored.",4,NA,TRUE
-"The pharmacist who the button that the stranger saw questioned the customer.",2,1,FALSE
-"The pharmacist who the button that the stranger saw questioned the customer.",2,1,FALSE
-"The pharmacist who the button that the stranger saw troubled questioned the customer.",4,NA,FALSE
-"The pharmacist who the optician that the stranger saw questioned the customer.",2,NA,FALSE
-"The picture on the postcard is of a Dutch farm.",4,NA,TRUE
-"The pictures on the postcard is of a Dutch farm.",NA,2.5,FALSE
-"The pictures on the postcard is of a Dutch farm.",NA,2.5,FALSE
-"The pictures on the postcards are of a Dutch farm.",4,5,TRUE
-"The pictures on the postcards are of a Dutch farm.",4,5,TRUE
-"The picture that the artist who the school had expelled for cheating was hurriedly copying.",1,NA,FALSE
-"The picture that the artist who the school had expelled for cheating was hurriedly copying was printed in a magazine.",2,NA,TRUE
-"The picture that the artist who the school had expelled for cheating was printed in a magazine.",NA,5,FALSE
-"The picture that the artist who the school was hurriedly copying was printed in a magazine.",NA,3,FALSE
+"The mistake in the program is small but important.",NA,5,TRUE
+"The mistakes in the program is small but important.",0,NA,FALSE
+"The mother who the daughter that the sister found frightened greeted the grandmother.",1,NA,TRUE
+"The novel that the horror author who the publishing company had typed quickly was banned by the local library.",4,NA,FALSE
+"The painter who the film that the friend liked disturbed admired the poet.",1,NA,FALSE
+"The party that was not organized by the journalists had any problems with catering.",NA,1,FALSE
+"The picture that the artist who the school had expelled for cheating was hurriedly copying was printed in a magazine.",NA,1,TRUE
 "The polices that the governor recommended was hugely unpopular.",NA,0,FALSE
-"The policies that the governors recommended were hugely unpopular.",5,NA,TRUE
-"The policies that the governors recommended were hugely unpopular.",5,NA,TRUE
-"The policy that the governors recommended were hugely unpopular.",1,NA,FALSE
-"The prayer that the monk who the religious fanatic had persecuted relentlessly was chanting every day.",NA,5,FALSE
-"The prayer that the monk who the religious fanatic had persecuted relentlessly was chanting every day was echoing in the empty church.",2,0,TRUE
-"The prayer that the monk who the religious fanatic had persecuted relentlessly was chanting every day was echoing in the empty church.",2,0,TRUE
-"The prayer that the monk who the religious fanatic had persecuted relentlessly was echoing in the empty church.",4,NA,FALSE
-"The prayer that the monk who the religious fanatic was chanting every day was echoing in the empty church.",0.5,NA,FALSE
-"The prayer that the monk who the religious fanatic was chanting every day was echoing in the empty church.",0.5,NA,FALSE
-"The problem in the wealthy suburban school has been brewing for years.",NA,3,TRUE
-"The problem in the wealthy suburban school has been brewing for years.",NA,3,TRUE
-"The problem in the wealthy suburban schools have been brewing for years.",NA,0,FALSE
-"The professors who criticized the new deans accept the new era grudgingly.",4,NA,TRUE
-"The receptionists who greeted the distinguished visitors were fluent in Spanish.",4,NA,TRUE
-"The receptionists who greeted the distinguished visitors were fluent in Spanish.",4,NA,TRUE
-"The receptionists who greeted the distinguished visitors were fluent in Spanish.",4,NA,TRUE
-"The receptionists who greeted the distinguished visitor was fluent in Spanish.",5,NA,FALSE
-"The receptionist who greeted the distinguished visitors were fluent in Spanish.",3,NA,FALSE
-"The receptionist who greeted the distinguished visitor was fluent in Spanish..",NA,5,TRUE
-"There had lived across the street all of the kids who were vandalizing our yard.",4,NA,TRUE
-"There had prevailed in the trial all of the defendants we were rooting for.",4,NA,TRUE
-"There has been a dog considered noisy.",NA,5,TRUE
-"There has been a man considered sick.",5,NA,TRUE
-"There has been a woman considered desperate.",1,3,TRUE
-"There has been a woman considered desperate.",1,3,TRUE
-"There has been a woman considered desperate.",1,3,TRUE
-"There is likely to live a snake in the garden.",NA,0,TRUE
-"There is likely to spread a disease around the world.",1,NA,TRUE
-"The restaurants the no local newspapers have recommended in their dining reviews have ever gone out of business.",3,NA,FALSE
-"The reward doubled to help catch the thief.",NA,3,FALSE
-"The saxophonist who the baton that the conductor brought along thanked the violinist.",4.5,NA,FALSE
-"The saxophonist who the baton that the conductor brought along thanked the violinist.",4.5,NA,FALSE
-"The saxophonist who the trumpeter that the conductor brought along distracted thanked the violinist.",0,3,TRUE
-"The saxophonist who the trumpeter that the conductor brought along distracted thanked the violinist.",0,3,TRUE
-"The saxophonist who the trumpeter that the conductor brought along thanked the violinist.",NA,1,FALSE
-"The shirt that the seamstress who the immigration officer had investigated last week needed to be dry cleaned.",NA,3,FALSE
-"The shirt that the seamstress who the immigration officer had investigated last week was carefully mending needed to be dry cleaned.",0,3,TRUE
-"The shirt that the seamstress who the immigration officer had investigated last week was carefully mending needed to be dry cleaned.",0,3,TRUE
-"The shirt that the seamstress who the immigration officer was carefully mending needed to be dry cleaned.",3.5,NA,FALSE
-"The shirt that the seamstress who the immigration officer was carefully mending needed to be dry cleaned.",3.5,NA,FALSE
-"The singer that the venue hosted had any problem selling tickets.",NA,1,FALSE
-"The skyscrapers from the 80’s ever brought their designers fame.",NA,3,FALSE
-"The skyscrapers from the 80’s ever brought their designers fame.",NA,3,FALSE
-"The skyscrapers from the 80’s ever brought their designers fame.",NA,3,FALSE
-"The slogan on the poster is offensive to vegetarians.",5,NA,TRUE
-"The slogan on the posters are offensive to vegetarians.",2,5,FALSE
-"The slogan on the posters are offensive to vegetarians.",2,5,FALSE
-"The slogan on the posters are offensive to vegetarians.",2,5,FALSE
-"The slogans on the poster is offensive to vegetarians.",1,0,FALSE
-"The slogans on the poster is offensive to vegetarians.",1,0,FALSE
-"The soldier that the battalion’s senior officers accused were innocent.",NA,0,FALSE
-"The son who the father that the teacher saw disturbed visited the grandfather.",NA,3,TRUE
-"The son who the father that the teacher saw visited the grandfather.",3.5,NA,FALSE
-"The son who the father that the teacher saw visited the grandfather.",3.5,NA,FALSE
-"The son who the loudspeaker that the teacher saw disturbed visited the grandfather.",1,0,FALSE
-"The son who the loudspeaker that the teacher saw disturbed visited the grandfather.",1,0,FALSE
-"The son who the loudspeaker that the teacher saw visited the grandfather.",0,NA,FALSE
-"The tables that the students painted look nice.",5,NA,TRUE
-"The table that the students painted look nice.",NA,5,FALSE
-"The tiles used to cover the floors are from Morocco.",5,4.5,TRUE
-"The tiles used to cover the floors are from Morocco.",5,4.5,TRUE
-"The tiles used to cover the floors are from Morocco.",5,4.5,TRUE
-"The tiles used to cover the floors is from Morocco.",4.5,0,FALSE
-"The tiles used to cover the floors is from Morocco.",4.5,0,FALSE
-"The tiles used to cover the floors is from Morocco.",4.5,0,FALSE
-"The tile used to cover the floors are from Morocco.",NA,5,FALSE
-"The trader who the businessman that the professor hired annoyed the investor.",3,NA,FALSE
-"The trader who the businessman that the professor hired annoyed the investor.",3,NA,FALSE
-"The trader who the businessman that the professor hired confused annoyed the investor.",1.5,NA,TRUE
-"The trader who the businessman that the professor hired confused annoyed the investor.",1.5,NA,TRUE
-"The trader who the computer that the professor hired confused annoyed the investor.",NA,0,FALSE
-"The trophy that the athlete who the restaurant had hired as a spokesman had won at the track meet.",NA,1,FALSE
-"The trophy that the athlete who the restaurant had hired as a spokesman had won at the track meet was stolen later.",2,4,TRUE
-"The trophy that the athlete who the restaurant had hired as a spokesman had won at the track meet was stolen later.",2,4,TRUE
-"The trophy that the athlete who the restaurant had won at the track meet was stolen later.",NA,1,FALSE
-"The warning from the expert falls on deaf ears.",NA,3,TRUE
-"The warning from the experts fall on deaf ears.",3,0,FALSE
-"The warning from the experts fall on deaf ears.",3,0,FALSE
-"The warnings from the expert falls on deaf ears.",5,2,FALSE
-"The warnings from the expert falls on deaf ears.",5,2,FALSE
-"The warnings from the experts fall on deaf ears.",NA,4,TRUE
-"The warnings from the experts fall on deaf ears.",NA,4,TRUE
-"The worker who the bucket that the foreman looked for injured questioned the shepherd.",1,NA,FALSE
-"The worker who the tenant that the foreman looked for injured questioned the shepherd.",1,NA,TRUE
-"They anticipate that everybody will contact Fred that you do.",4,NA,TRUE
-"This week more hard-working students continued writing their thesis than lazy students did.",3,NA,TRUE
-"This week more hard-working students continued writing their thesis than the lazy student did.",3,NA,FALSE
-"This week more hard-working students continued writing their thesis than the lazy student did.",3,NA,FALSE
-"This week more hard-working students continued writing their thesis than the lazy student did.",3,NA,FALSE
-"This year more football fans bought a home game ticket than the hockey fan did.",1,NA,FALSE
-"Voice actors who do major cartoons get any fans approaching them in the street.",2,NA,FALSE
-"We alleged Carrie to the police to be guilty.",3,NA,TRUE
-"We proved Susan to the authorities to be the thief.",1,NA,TRUE
-"We were sure that the teaching assistant. liked to meet before lecture.",NA,0,TRUE
-"Who did the coach trade an enemy of to another team?",2,1,TRUE
-"Who did the coach trade an enemy of to another team?",2,1,TRUE
-"Who did the coach trade an enemy of to another team?",2,1,TRUE
-"Who did they send a parent of to an unpleasant meeting?",NA,4,TRUE
+"The professors who criticized the new dean accepts the new era grudgingly.",5,NA,FALSE
+"There has been a man considered sick.",1,NA,TRUE
+"There has been a man considered violent.",NA,1,TRUE
+"The table that the student painted looks nice.",5,NA,TRUE
+"The tiles used to cover the floors is from Morocco.",NA,1,FALSE
+"The trophy that the athlete who the restaurant had hired as a spokesman had won at the track meet.",NA,5,FALSE
+"The trophy that the athlete who the restaurant had hired as a spokesman was stolen later.",NA,0,FALSE
+"The warning from the expert falls on deaf ears.",NA,5,TRUE
+"To whom did you give what?",2,NA,FALSE
+"Who did the coach trade an enemy of to another team?",NA,2,TRUE
+"Who did the principal assign children of to a different teacher?",NA,2,TRUE
+"Yesterday more seniors skipped an extremely boring class than Jonathan did last month.",1,NA,FALSE
+"Yesterday more seniors skipped an extremely boring class than juniors did last month.",NA,4,TRUE
