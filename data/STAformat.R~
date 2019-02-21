@@ -1,0 +1,12 @@
+rm(list=ls())#To remove!
+preexisting = ls() #Cleanup rm later should respect anything that already existed.
+source("readData.R")
+toclear <- c(setdiff(ls(),preexisting),"toclear") #rm(list=toclear) erases everything built by readData, keeps pre-existing workspace & any products of this script.
+
+
+stim_sentencetype_general <- ratingtypes.df%>%mutate(stimID=as.integer(item_type))%>%select(stimID
+
+
+##do stuff
+
+#rm(list=toclear)
