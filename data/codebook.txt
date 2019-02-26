@@ -1,0 +1,52 @@
+# sentencetype_general.RData #
+Is a dput of a matrix with cols "stimID",  "canon_status" "ratingtype" "rating"
+
+*stimID*
+Sentence structure type. Integer labels correspond to the factor levels of responses.df$item_type
+	 1 - 'control'. Grammatical counterparts to the comparison illusion sentences. Eg "At Peter's party more toddlers ate a tasty strawberry cupcake than high schoolers did."
+	 2 - 'full'. Grammatical double-embedding sentences with all required elements. Eg "The worker who the tenant that the foreman looked for injured questioned the shepherd."
+	 3 - 'illusion'. Ungrammatical comparative sentences often considered acceptable. Classic example is "More people have been to Russia than I have."
+	 4 - 'linguistsNO_ppntsYES'. Items from Sprouse13 which were given as 'bad examples' in LI articles but were rated highly by MTurk participants. Eg. "To whom did you present what?" This group is special: it's heterogenous for structure and possibly mislabled for canonical status.
+	 5 - 'linguistsYES_ppntsNO' Items from Sprouse13 given as 'good examples' in LI articles but rated poorly by MTurk participants. Eg "The question was answered feeling nervous." This group is special: it's heterogenous for structure and possibly mislabled for canonical status.
+	 6 - 'missing1' Ungrammatical embedding sentences with the first verb missing. Eg "The painter who the hut that the father missed sheltered cooked for the artist." Generally considered unacceptable.
+	 7 - 'missing2' Ungrammatical embedding sentences with the second verb missing. Eg "The trophy that the athlete who the restaurant had hired as a spokesman was stolen later." The classic 'acceptability illusion' for this sentence type is that 'missing2' sentences are more acceptable than other flavors of missing (or even full!) despite being ungrammatical.
+	 8 - 'missing3' Ungrammtical embedding sentences with the third verb missing. Eg "The conductor who the sponge that the worker ignored berated the musician."Generally considered unacceptable.
+	 9 - 'natural_error' Ungrammatical agreement attraction sentences with local-plural agreement. Eg "The computer installed in the missiles are less powerful than your phone." Although ungrammatical, this is a relatively common error in the wild and is considered pretty acceptable.
+	 10 - 'Partial match NPI' Ungrammatical, has the right 'kind' of negative word but not in the appropriate commanding relationship. Eg "Someone who didn’t believe ever said so much as a word about it."
+	 11 - 'Unlicensed NPI' Ungrammatical, a negation with no hope of actually acting as a negation. Eg "Everyone who believed ever said so much as a word about it." 
+	 12 - 'unnatural error' Ungrammatical agreement attraction sentence where the misleading local-agreement is singular not plural. In a sense a mirror-image of the natural error, but expected to give much lower acceptability despite having the same grammaticality status. Eg "The defects in the car is not obvious except to experts.".
+	 13 - 'valid NPI' Grammatical negation, nothing to see here, everything's fine. Eg "No calligraphy except that by Mi Fu ever bears that particular seal."
+	 14 - 'valid plural' Grammatical agreement-attraction sentences with a plural subject, eg "The mistakes in the programs are small but important."
+	 15 - 'valid singular' Grammatical agreement-attraction sentences with a singluar subject, eg "The entrance to the world-famous biology laboratory is visible from the street."
+
+
+*canon_status*
+ 1 - Grammatical according to linguists.
+ 2 - Ungrammatical according to linguists.
+ Participants generally agree with linguists, but with two notable exceptions. The Sprouse13 items may be mislabled, and 'full' embedding sentences are rated by participants as ungrammatical. How 'canonical' the canonical status of these labels is isn't certain.
+
+*ratingtype*
+1 - Responding to the question 'Is this sentence acceptable'
+2 - Responding to the question 'Is this sentence grammatical'
+
+*rating*
+Mean value of ratings on a 6-point likert scale, coded as 0-5.
+Randomization was to stim type (five kinds of sentence) and canon_status (grammatical vs ungrammatical), so participants contributed evenly to the combinations of these two factors. Note that some of the sentence-types split the grammatical/ungrammatical responses over multiple structures: agreement attraction has two grammatical forms, plural vs singular, while embedding has one grammatical form and three ungrammatical forms. As a result, the number of responses per item-type varies. Each item-type is represented by multiple items. The lowest number of responses to a single item is 6, the typical number of responses to a single item is around 20, the highest number of responses for a single item is 66. (The distribution is not perfectly even because data from the pilot is included. The instructions/task did not change, so I think the responses are compatible, but randomization in the pilot was uniform over all items, disregarding condition.)
+
+   item_type            stim_type            canon_status count
+   <fct>                <fct>                <lgl>        <int>
+ 1 control              comparison           TRUE          1117
+ 2 full                 embedding            TRUE          1129
+ 3 illusion             comparison           FALSE         1128
+ 4 linguistsNO_ppntsYES expert_vs_ppnt_clash FALSE         1119
+ 5 linguistsYES_ppntsNO expert_vs_ppnt_clash TRUE          1139
+ 6 missing1             embedding            FALSE          403
+ 7 missing2             embedding            FALSE          391
+ 8 missing3             embedding            FALSE          369
+ 9 natural_error        agreementattraction  FALSE          580
+10 Partial match NPI    NPI                  FALSE          558
+11 Unlicensed NPI       NPI                  FALSE          573
+12 unnatural_error      agreementattraction  FALSE          567
+13 Valid NPI            NPI                  TRUE          1118
+14 valid_plural         agreementattraction  TRUE           565
+15 valid_singular       agreementattraction  TRUE           583

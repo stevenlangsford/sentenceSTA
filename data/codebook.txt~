@@ -1,0 +1,11 @@
+*sentencetype_general.RData*
+
+dput of a matrix with the following cols:
+
+"stimID": Sentence structure type. Integer labels correspond to the factor levels of responses.df$item_type
+	 1 - 'control'. Grammatical counterparts to the comparison illusion sentences. eg "At Peter's party more toddlers ate a tasty strawberry cupcake than high schoolers did."
+	 2 - 'full'. Grammatical double-embedding sentences with all required elements. Eg "The worker who the tenant that the foreman looked for injured questioned the shepherd."
+	 3 - 'illusion'
+"canon_status" "ratingtype" "rating"
+
+
