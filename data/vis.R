@@ -1,7 +1,7 @@
 rm(list=ls())#To remove...
 source("readData.R")
 ##Convenience flags: make sure all plot var names end with .plot, then save all or print all to screen at the end of the file.
-saveplots <- FALSE
+saveplots <- TRUE
 viewplots <- FALSE
 
 #Ok this response count thing is good to know, looks a little creepy. Imbalance in items is created by balancing responses over stim_type & canon_status evenly, but there are different numbers of items in each of these conditions, so the distribution over items is rough. Just keep your eyes open I guess?
@@ -58,6 +58,26 @@ ratingcomparison_byitemtype.plot <-
     geom_text(aes(label=paste0(acc_stim_type,":",acc_item_type)),hjust=1, vjust=1)+
     xlab("Mean acceptability rating")+ylab("Mean grammaticality rating")+scale_color_discrete(name="Canonical status")
 
+ratingcomparison_byitemtype_nolabels.plot <- 
+    ggplot(byitemtype_ci.df,aes(x=acc_meanresponse,y=gram_meanresponse,color=gram_canon_status))+
+    geom_line(aes(x=acc_meanresponse,y=acc_meanresponse),color="black",alpha=.3)+
+#    geom_smooth(aes(group=1),linetype="dashed",alpha=.1)+ #1d != lm
+    geom_point(size=3)+
+    geom_errorbarh(aes(xmin=acc_ci.low,xmax=acc_ci.high))+
+    geom_errorbar(aes(ymin=gram_ci.low,ymax=gram_ci.high))+
+#    geom_text(aes(label=paste0(acc_stim_type,":",acc_item_type)),hjust=1, vjust=1)+
+    xlab("Mean acceptability rating")+ylab("Mean grammaticality rating")+scale_color_discrete(name="Canonical status")+guides(color=FALSE)
+
+## ratingcomparison_byitemtype_nolabels_withsmooth.plot <- 
+##     ggplot(byitemtype_ci.df,aes(x=acc_meanresponse,y=gram_meanresponse,color=gram_canon_status))+
+##     geom_line(aes(x=acc_meanresponse,y=acc_meanresponse),color="black",alpha=.3)+
+##     geom_smooth(aes(group=1),linetype="dashed",alpha=.1,se=FALSE)+ #1d != lm
+##     geom_point(size=3)+
+##     geom_errorbarh(aes(xmin=acc_ci.low,xmax=acc_ci.high))+
+##     geom_errorbar(aes(ymin=gram_ci.low,ymax=gram_ci.high))+
+## #    geom_text(aes(label=paste0(acc_stim_type,":",acc_item_type)),hjust=1, vjust=1)+
+##     xlab("Mean acceptability rating")+ylab("Mean grammaticality rating")+scale_color_discrete(name="Canonical status")
+
 
 itemtypediffs.df <- ratingtypes.df%>%group_by(stim_type,item_type)%>%summarize(meandiff=mean(is_acceptable-is_grammatical, na.rm=TRUE))%>%ungroup()
 
@@ -94,5 +114,5 @@ for(astimtype in unique(ratingtypes.df$stim_type)){
 ##For everything that obeys the .plot naming convention:
 for(aplot in grep("\\.plot",ls(),value=TRUE)){
     if(viewplots){ x11(); print(eval(parse(text=aplot)))}
-    if(saveplots){ggsave(eval(parse(text=aplot)),file=paste0("plots/",aplot,".png"),width=15)}
+    if(saveplots){ggsave(eval(parse(text=aplot)),file=paste0("plots/",aplot,".png"),width=10)}
 }
