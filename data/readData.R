@@ -5,9 +5,16 @@ theme_set(theme_light())
 demographics.df <- read.csv("raw/demographicsdata.csv")
 
 responses.df <- read.csv("raw/sentenceresponsedata.csv")%>%
-    filter(response!="continue")%>%
+    group_by(ppntID)%>%arrange(responseTime)%>% #setup to recover reading times
+    mutate(deliberationTime=responseTime-lag(responseTime,default=responseTime[1]),
+           normTime=(deliberationTime-mean(deliberationTime))/sd(deliberationTime) #standardize reading times. Note there are spacer stim fronting question blocks, the continue button on those 'starts the clock' for the first actual stim: first spacer screen gets a deliberation time of 0.
+           )%>%
+    ungroup()%>%
+    filter(response!="continue")%>% #removes those spacer screen response rows.
     mutate(response=as.numeric(as.character(response)),
-           questiontext=ifelse(questiontext=="Is this an <em>acceptable</em> English sentence?","is_acceptable","is_grammatical")
+           textnchars=nchar(as.character(text)), #in characters, so includes spaces/punctuation. Is wordcount better/different? Probably?
+           wordcount=sapply(strsplit(as.character(text), " "), length)+1, #hacky but good enough? There are no double spaces or one word sentences here, right?
+           questiontext=ifelse(questiontext=="Is this an <em>acceptable</em> English sentence?","is_acceptable","is_grammatical") #more code-friendly level names.
            )
 
 ##exclusions
@@ -42,8 +49,11 @@ responses.df$item_type <- unlist(sapply(responses.df$text,function(x){return(apr
 
 
 byitem.df <- responses.df%>%
-    group_by(questiontext,text,stim_type,item_type)%>% #stim/item type does not vary after grouping by text, but handy to have around?
-    summarize(mean_response=mean(response),count=n())%>%
+    group_by(questiontext,text,stim_type,item_type,canon_status)%>% #stim/item type does not vary after grouping by text, but handy to have around?
+    summarize(mean_response=mean(response),
+              mean_time=mean(normTime),
+              canonstatus=canon_status[1],
+              count=n())%>%
     ungroup()#just taking the mean like this possibly not ideal! You're in raw likert land, consider standardizing by ppnt (iff that doesn't muddy the waters too much re state trace / comparisons between acc and gram patterns? Also, some of these are probably error-detected/error-missed mixtures! Might be important.
 
 
