@@ -1,8 +1,8 @@
 rm(list=ls())#To remove...
 source("readData.R")
 ##Convenience flags: make sure all plot var names end with .plot, then save all or print all to screen at the end of the file.
-saveplots <- TRUE
-viewplots <- FALSE
+saveplots <- FALSE
+viewplots <- TRUE
 
 #Ok this response count thing is good to know, looks a little creepy. Imbalance in items is created by balancing responses over stim_type & canon_status evenly, but there are different numbers of items in each of these conditions, so the distribution over items is rough. Just keep your eyes open I guess?
 item_responsecount.plot <-
@@ -60,7 +60,7 @@ ratingcomparison_byitemtype.plot <-
 
 ratingcomparison_byitemtype_nolabels.plot <- 
     ggplot(byitemtype_ci.df,aes(x=acc_meanresponse,y=gram_meanresponse,color=gram_canon_status))+
-    geom_line(aes(x=acc_meanresponse,y=acc_meanresponse),color="black",alpha=.3)+
+#    geom_line(aes(x=acc_meanresponse,y=acc_meanresponse),color="black",alpha=.3)+
 #    geom_smooth(aes(group=1),linetype="dashed",alpha=.1)+ #1d != lm
     geom_point(size=3)+
     geom_errorbarh(aes(xmin=acc_ci.low,xmax=acc_ci.high))+
@@ -95,15 +95,15 @@ ratingbyitemhist.plot <-
 
 
 for(astimtype in unique(ratingtypes.df$stim_type)){
-    #crazy eval thing is just to keep the ".plot names for plots" convention, which makes plot saving DRY. Not sure if this is good, seems worth trying? If it's bad, sh*t like this is where it goes bad...
+    #crazy eval thing is just to keep the ".plot names for plots" convention, which makes plot saving DRY. Not sure if this is good, seems worth trying? If it's bad, sh*t like this is where it goes bad... edit March 2019: yeah this kinda sucks a little, breaks the searchability of file names which was the main advantage?
        eval(parse(text=paste0(astimtype,"_AGhistograms.plot<-",
 "(ggplot(ratingtypes.df,aes(x=is_acceptable))+geom_histogram(binwidth=.1)+ggtitle(paste0(astimtype,\": acceptability rating task\"))+
     geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype),aes(xintercept=is_acceptable,color=item_type),alpha=.3)+
-    geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype)%>%group_by(item_type)%>%summarize(mean_acceptability=mean(is_acceptable))%>%ungroup(),
+    geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype)%>%group_by(item_type)%>%summarize(mean_acceptability=mean(is_acceptable,na.rm=TRUE))%>%ungroup(),
                aes(xintercept=mean_acceptability,color=item_type),size=2)+guides(color=FALSE))+
 (ggplot(ratingtypes.df,aes(x=is_grammatical))+geom_histogram(binwidth=.1)+ggtitle(paste0(astimtype,\": grammaticality rating task\"))+
     geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype),aes(xintercept=is_grammatical,color=item_type),alpha=.3)+
-    geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype)%>%group_by(item_type)%>%summarize(mean_acceptability=mean(is_grammatical))%>%ungroup(),
+    geom_vline(data=ratingtypes.df%>%filter(stim_type==astimtype)%>%group_by(item_type)%>%summarize(mean_acceptability=mean(is_grammatical,na.rm=TRUE))%>%ungroup(),
                aes(xintercept=mean_acceptability,color=item_type),size=2))
     ")))
 }

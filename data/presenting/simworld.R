@@ -2,7 +2,7 @@ library(tidyverse)
 library(patchwork)
 theme_set(theme_light())
 
-rm(list=ls())
+#rm(list=ls()) #I hear this is bad practice but I'm still addicted
 
 set.seed(4)
 
@@ -86,8 +86,8 @@ ggplot(one_d_stim.df,aes(x=goodness,y=grammaticality))+geom_point(aes(color=top_
 file="02_AG_colbyrank.png",width=10)
 
 ggsave(
-(ggplot(one_d_stim.df,aes(x=goodness,y=acceptability))+geom_point(aes(color=status,alpha=(status!="boring")))+guides(color=FALSE,alpha=FALSE)+ggtitle("Acceptability")+
- ggplot(one_d_stim.df,aes(x=goodness,y=grammaticality))+geom_point(aes(color=status,alpha=(status!="boring")))+guides(color=FALSE,alpha=FALSE)+ggtitle("Grammaticality")),
+(ggplot(one_d_stim.df,aes(x=goodness,y=acceptability))+geom_point(aes(color=status,alpha=(status!="boring")))+guides(color=FALSE,alpha=FALSE)+ggtitle("Acceptability")+ylim(c(0,1))+ylab("")+
+ ggplot(one_d_stim.df,aes(x=goodness,y=grammaticality))+geom_point(aes(color=status,alpha=(status!="boring")))+guides(color=FALSE,alpha=FALSE)+ggtitle("Grammaticality")+ylim(c(0,1))+ylab("")),
 file="03_highlight_dissoc.png",width=10)
 
 
