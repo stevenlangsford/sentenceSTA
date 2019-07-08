@@ -5,7 +5,7 @@ var dev = true; //could consider putting this in localStorage too, in case you w
 var instructionindex = 0;
 var instructionlist = [dev ? "Development version: <button onclick='startExp()'>Skip instructions</button>" : "Hi! These are the instructions. Please read them carefully, there will be a short quiz at the end.", "This is part of a study being run by the University of Michigan. By clicking 'Next', you are agreeing to take part in it. To participate, you must be over 18. You should know that you're free to withdraw at any time (although you'll only be paid on completion), and that although data gained from this study may be published or viewed by University of Michigan staff and relevant government offices, you will not be identified and your personal details will not be divulged, nor will anything be linked to your Turk Id. Any identifiable data will be used for administration only and deleted on completion of the study, non-identifiable data may be used in future research. </br><span style=\"font-size:.8em\">Please direct any questions about this study to Steven Langsford, reachable at <strong>slangsfo at umich dot edu</strong>. The principle investigator is Prof. Richard Lewis. If you have concerns regarding the ethics of this study and don't want to contact the investigators directly, you can contact the Health Sciences and Behavioral Sciences review board at irbhsbs at umich dot edu or phone: (734) 936-0933 or toll free, (866) 936-0933</span>","This study takes about 15 minutes, please only continue if you have 15 minutes free without interruptions. Although you will not directly benefit from being in this study, the results will help build more accurate descriptions of how language works. We don't believe there are any risks from participating in this research.",
 		       
-		       "This study asks you to make a series of judgments about sentences.","You'll be asked to make three different kinds of judgment. In one block of questions, you'll be asked if sentences are grammatical. In another block, you'll be asked if they're acceptable. In a third block, you'll be asked if the sentence makes sense.", "We're trying to see if rating-scale judgments like these can pull apart distinct factors that contribute to a sentence being a 'good' example of English.","Whether a sentence is 'grammatical' or not depends on the structure of the sentence, whether or not it 'follows the rules'.","A sentence doesn't have to be a good sentence, or even make any sense at all to be grammatical.","The most famous example of this is the sentence 'colorless green ideas sleep furiously'. Even though this sentence doesn't make sense, it 'follows the rules' for constructing an English sentence. English speakers mostly agree that 'colorless green ideas sleep furiously' is grammatical while 'green furiously ideas colorless sleep' is not.","In the grammar block, please use the buttons on the screen to say how confident you are that the sentence is grammatical or ungrammatical. Please label all sentences with a grammatical error as ungrammatical, even if the error is small, and label all sentences with no errors as grammatical, even if they are badly written or unclear.","In contrast, 'acceptability' is a broader concept that is more about how natural a sentence sounds.","Among all grammatical sentences, some will be highly acceptable and 'sound good' while others will be not very acceptable and 'sound bad', even though they're all grammatical. Similarly, although ungrammatical sentences tend to 'sound bad', some are worse than others.","In the acceptability block, please rate each sentence on the acceptability scale provided. Sentences that sound natural should get higher ratings, sentences that sound bad should get lower ratings.","Finally an important attribute of a sentence is whether or not it makes sense. It's possible for perfectly grammatical English to convey no meaning at all. On the other hand, for some kinds of grammatical mistakes the meaning is still clear, even though the grammatical error is obvious.", "In the sense block, please give high ratings to sentences where the meaning is clear and the low ratings to nonsense, regardless of whether the sentence is grammatical or acceptable."]
+		       "This study is about what makes a sentence well-formed in English.","There are probably lots of things that contribute to how 'good' a sentence sounds. These factors include how easy it is to process, whether it makes sense, and whether or not it's grammatical.","In this study, we're looking at grammar specifically and how that relates to overall acceptability.","There will be two blocks of questions. One will ask you to rate how acceptable a sentence is, and the other will ask you to indicate if a sentence is grammatical or not.","A sentence is <strong>grammatical</strong> if it 'follows the rules' for constructing an English sentence. A sentence doesn't have to be a good sentence, or even make any sense at all to be grammatical.","The most famous example of this is the sentence 'colorless green ideas sleep furiously'. Even though this sentence doesn't make sense, it 'follows the rules' for constructing an English sentence. English speakers mostly agree that 'colorless green ideas sleep furiously' is grammatical while 'green furiously ideas colorless sleep' is not.","In the grammar block, please use the buttons on the screen to say how confident you are that the sentence is grammatical or ungrammatical. Please label all sentences with a grammatical error as ungrammatical, even if the error is small, and label all sentences with no errors as grammatical, even if they are badly written or unclear.","In contrast, 'acceptability' is a broader concept that is more about how natural a sentence sounds.","Among all grammatical sentences, some will be highly acceptable and 'sound good' while others will be not very acceptable and 'sound bad', even though they're all grammatical. Similarly, although ungrammatical sentences tend to 'sound bad', some are worse than others.","In the acceptability block, please rate each sentence on the acceptability scale provided. Sentences that sound natural should get higher ratings, sentences that sound bad should get lower ratings."]
 
 function nextInstructions(){
     var nextButton = "<button id='nextbutton' onclick='nextInstructions()'>Next</button>"
@@ -13,6 +13,8 @@ function nextInstructions(){
     instructionindex++;
     if(instructionindex>instructionlist.length)quiz()
 }
+
+
 
 function quiz(){
     scroll(0,0);
@@ -34,18 +36,18 @@ function quiz(){
 	"<input type='radio' name='q2' id='q2d' value='d'>&nbsp All of the above. <br/>"+
 	"</span>"+
 
-	"<span style='text-align:left'><p>"+
-	 "<strong>For this study, which of these best describes a sentence that <em>makes sense</em>?</strong></br>"+
-	 "<input type='radio' name='q3' id='q3a' value='a'>&nbsp One that corresponds to the scene in the picture.<br/>"+
-	 "<input type='radio' name='q3' id='q3b' value='b'>&nbsp One that only a native English speaker would say.<br/>"+
-	 "<input type='radio' name='q3' id='q3c' value='c'>&nbsp One that is short and uses simple words.<br/>"+
-	 "<input type='radio' name='q3' id='q3d' value='d'>&nbsp One that communicates a clear meaning. <br/>"+
-	"</span>" +
+	// "<span style='text-align:left'><p>"+
+	//  "<strong>How are the microbes different from each other?</strong></br>"+
+	//  "<input type='radio' name='q3' id='q3a' value='a'>&nbsp They are different colors <br/>"+
+	//  "<input type='radio' name='q3' id='q3b' value='b'>&nbsp They are different shapes <br/>"+
+	//  "<input type='radio' name='q3' id='q3c' value='c'>&nbsp Each microbe has eight features which can vary <br/>"+
+	//  "<input type='radio' name='q3' id='q3d' value='d'>&nbsp Each microbe has two features which can vary <br/>"+
+	//"</span>"
 	"</br><button onclick='quizvalidate()'>Continue</button>";
 }
 
 function quizvalidate(){
-    var valid = document.getElementById("q1c").checked && document.getElementById("q2a").checked && document.getElementById("q3d").checked; //etc
+    var valid = document.getElementById("q1c").checked && document.getElementById("q2a").checked;//&& document.getElementById("q3d").checked; //etc
     if(valid){demographics();}
     else{
 	alert("You didn't answer all the questions correctly. Please read through the instructions and take the quiz again to continue.");
