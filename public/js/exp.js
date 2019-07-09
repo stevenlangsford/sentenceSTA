@@ -1,6 +1,6 @@
 var trials = [];
 var trialindex = 0;
-var stim_per_condition = 2;//dev, real ~= 25?; //x3 conditions, gram, acc, sense.
+var stim_per_condition = 25;//x3 conditions, gram, acc, sense. Est time per cond?
 
 function responseListener(aresponse){//global so it'll be just sitting here available for the trial objects to use. So, it must accept whatever they're passing.
     //    console.log("responseListener heard: "+aresponse); //diag
@@ -633,8 +633,8 @@ var conditions = shuffle([{question:"Is this sentence acceptable?",
 			   optionlabels:["Definitely</br> does not make sense",
 					 "Mostly </br> does not make sense",
 					 "Close but </br> does not make sense",
-					 "Barely </br> makes sense",
-					 "Mostly </br> makes sense",
+					 "Barely </br>       makes   sense",
+					 "Mostly </br>       makes   sense",
 					 "Definitely </br> makes sense"],
 			   myspacer: new spacerScreen("This block of questions asks you to judge if a sentence makes sense. Please answer 'Yes' if the sentence is meaningful, or 'No' if it is not.")
 			  }])
@@ -648,7 +648,7 @@ for( var whichcondition = 0; whichcondition < conditions.length; whichcondition+
     }
     //attention checks in gramm block. Because why not? Uncontrovertial answers apply there?
     if(conditions[whichcondition].question=="Is this sentence grammatical?"){
-	trials.push(new makeTrial(conditions[whichcondition].question, "The table was being heavy.", 6, conditions[whichcondition].optionlabels));
+	trials.push(new makeTrial(conditions[whichcondition].question, "Him would have been fired.", 6, conditions[whichcondition].optionlabels));
 	trials.push(new makeTrial(conditions[whichcondition].question, "Sarah expected to get a good grade.", 6, conditions[whichcondition].optionlabels));
     }
 }

@@ -62,4 +62,5 @@ ratingtypes.df <- byitem.df%>%select(-count)%>%spread(questiontext,mean_response
 item_responsecount.df <- responses.df%>%group_by(text,item_type,stim_type,canon_status)%>%summarize(count=n())
 itemtype_responsecount.df <- responses.df%>%group_by(item_type,stim_type,canon_status)%>%summarize(count=n())
 
+stop("don't overwrite")
 write.csv(ratingtypes.df,file="threeratingtypes.csv",row.names=FALSE)
