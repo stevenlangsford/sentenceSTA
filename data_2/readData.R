@@ -5,10 +5,12 @@ library(janitor)
 rm(list = ls()) #not recommended, remove before sharing. :-P
 theme_set(theme_light())
 
-demographics.df <- read.csv("raw/demographicsdata.csv") %>%
+demographics.df <- read.csv("raw/demographicsdata.csv",
+                            stringsAsFactors = FALSE) %>%
     clean_names #may need to add a final newline to last line of raw download
 
-responses.df <- read.csv("raw/sentenceresponsedata.csv") %>%
+responses.df <- read.csv("raw/sentenceresponsedata.csv",
+                         stringsAsFactors = FALSE) %>%
     clean_names %>%
     group_by(ppnt_id) %>% arrange(response_time) %>% #responses from different ppnts may be interleaved in raw. Group and arrage allows calculation of deliberation time from adjacent response times. Note there are spacer/prompt stim fronting question blocks, the continue button on those 'starts the clock' for the first actual stim: first spacer screen gets a deliberation time of 0.
     mutate(deliberation_time =
@@ -20,7 +22,7 @@ responses.df <- read.csv("raw/sentenceresponsedata.csv") %>%
     filter(response != "continue") %>% #removes those spacer screen response rows.
     mutate(response = as.numeric(as.character(response)),
            textnchars = nchar(as.character(text)), #in characters, so includes spaces/punctuation. Is wordcount better/different? Probably?
-           wordcount = sapply(strsplit(as.character(text), " "), length) + 1, #hack assuming no double spaces or one word sentences.
+           wordcount = sapply(strsplit(as.character(text), " "), length), #hack assuming no double spaces or one word sentences.
            questiontext = sapply(questiontext, function(x){
                mywords <- str_split(x, " ")[[1]]
                return(mywords[length(mywords)])
@@ -82,6 +84,15 @@ badids <- badids %>%
 #responses.df <- responses.df %>%
 #    filter(!(ppnt_id %in% badids$ppnt_id))
 
+##remove attn check items
+responses.df <- responses.df %>%
+    filter(text != "Sarah expected to get a good grade." &&
+           text != "Him would have been fired.")
+
+
+stiminfo.df <- read.csv("exp2_stim/adger_cgi_listversion.csv",
+                        stringsAsFactors = FALSE)
+responses.df <- left_join(responses.df, stiminfo.df, by = "text")
 
 ##handy summary df's
 item_responsecount.df <- responses.df %>%
