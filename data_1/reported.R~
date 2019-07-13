@@ -1,0 +1,32 @@
+library(tidyverse)
+library("BayesFactor")
+source("readData.R")
+
+saveplots <- TRUE
+
+##Timing was slower for gram.
+ttestBF(formula = normTime ~ questiontext,
+        data = as.data.frame(responses.df))
+
+responses.df %>%
+    filter(questiontext == "is_acceptable") %>%
+    select(normTime) %>%
+    summary
+
+responses.df %>%
+    filter(questiontext == "is_grammatical") %>%
+    select(normTime) %>%
+    summary
+
+##Responses were more extreme.
+
+responsehists.plot <-
+    ggplot(responses.df, aes(x = response)) +
+    geom_bar(position = "dodge") +
+    facet_wrap(~questiontext) +
+    theme(strip.text.x = element_text(size = 20))
+
+if (saveplots){
+    ggsave(responsehists.plot,
+           file = "plots/responsehists_mono.png")    
+}

@@ -10,7 +10,8 @@ item_responsecount.plot <-
     geom_point()+
     facet_grid(.~stim_type,scales="free")+ggtitle("Number of responses per item")
 
-responsehists.plot <- ggplot(responses.df,aes(x=response,fill=canon_status))+geom_bar(position="dodge")+facet_wrap(~questiontext)
+responsehists.plot <-
+    ggplot(responses.df,aes(x=response,fill=canon_status))+geom_bar(position="dodge")+facet_wrap(~questiontext)
 
 ratingcomparison_byitem.plot <-
     ggplot(ratingtypes.df,aes(x=is_grammatical,y=is_acceptable,color=canon_status))+geom_point(size=3)
@@ -25,7 +26,8 @@ bycondition.df <- responses.df%>%
 
  names(bycondition.df)=c("condition","canon_status","acceptability_rating","grammaticality_rating","sentencetype")
 
-ratingcomparison_bycondition.plot <- ggplot(bycondition.df,aes(x=acceptability_rating,y=grammaticality_rating,color=canon_status))+
+ratingcomparison_bycondition.plot <-
+    ggplot(bycondition.df,aes(x=acceptability_rating,y=grammaticality_rating,color=canon_status))+
     geom_line(aes(x=acceptability_rating,y=acceptability_rating))+
     geom_point(size=3)+
     geom_text(aes(label=sentencetype),hjust=0, vjust=0)
