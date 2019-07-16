@@ -13,7 +13,7 @@ p {
     margin-right:auto; 
  }
 
-table td {
+ .responsetd {
     width: 150px;
     overflow: hidden;
     display: inline-block;

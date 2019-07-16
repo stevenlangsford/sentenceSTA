@@ -45,12 +45,12 @@ function makeTrial(questiontext,targetsentence, hm_options,option_bookend_labels
 	var drawstring = "<h2>"+this.questiontext+"</h2>"+"<p class='centered' id='targtext'>"+targetsentence+"</p>"+
 	    "<table class='centered' width='70%'><tr>"
 		for(var i =0;i<hm_options;i++){
-		    drawstring+="<td><button class='responsebutton' onclick='responseListener(\""+i+"\")' disabled=true>O</button></td>";
+		    drawstring+="<td class='responsetd'><button class='responsebutton' onclick='responseListener(\""+i+"\")' disabled=true>O</button></td>";
 		}
 	drawstring+="</tr>"+
-	    "<tr><td colspan="+hm_options+">&nbsp</td></tr><tr>";
+	    "<tr><td class='responsetd' colspan="+hm_options+">&nbsp</td></tr><tr>";
 	for(var i =0;i<option_bookend_labels.length;i++){
-	    drawstring+="<td>"+option_bookend_labels[i]+"</td>";
+	    drawstring+="<td class='responsetd'>"+option_bookend_labels[i]+"</td>";
 	}
 	drawstring+="</tr></table>";
 	document.getElementById(targdiv).innerHTML=drawstring;
