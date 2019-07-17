@@ -55,7 +55,7 @@ responsecount <- responses.df %>% group_by(ppnt_id) %>%
     summarize(count = n())
 badids <- badids %>%
     rbind(responsecount %>%
-          filter(count != max(count)) %>%
+          filter(count < 76) %>% ##Magic number. Some id's were NA, localstorage failed? Be careful of anything that uses ppnt_id (norm time is one)
           select(ppnt_id) %>%
           mutate(reason = "incomplete")
           ) #Assumes max count == completion
@@ -80,19 +80,22 @@ badids <- badids %>%
           mutate(reason = "attncheck")
           )
 
-#Apply exclusions:
-#responses.df <- responses.df %>%
-#    filter(!(ppnt_id %in% badids$ppnt_id))
+##Apply exclusions:
+pre_exclusion.df <- responses.df
+    
+responses.df <- responses.df %>%
+    filter(!(ppnt_id %in% badids$ppnt_id))
 
 ##remove attn check items
 responses.df <- responses.df %>%
-    filter(text != "Sarah expected to get a good grade." &&
-           text != "Him would have been fired.")
+    filter(!(text %in% c("Sarah expected to get a good grade.",
+           "Him would have been fired.")))
 
 
 stiminfo.df <- read.csv("exp2_stim/adger_cgi_listversion.csv",
                         stringsAsFactors = FALSE)
-responses.df <- left_join(responses.df, stiminfo.df, by = "text")
+responses.df <- left_join(responses.df, stiminfo.df, by = "text") %>%
+    rename(stimsource = "source") #don't use a keyword as a var name, chump.
 
 ##handy summary df's
 item_responsecount.df <- responses.df %>%

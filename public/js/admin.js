@@ -68,7 +68,7 @@ function decomma(astring){ //lazy hack applied to demographics text-boxes for ha
 
 function demographics(){
 
-    document.getElementById("uberdiv").innerHTML= "<table class='center' style='text-align:left'><tr><td>Please fill out these demographic details. This is just for our records, and it is all kept separate from the study data. As long as you finish the experiment you will get paid no matter what you put here, so please be honest.<br/></td></tr>"+
+    document.getElementById("uberdiv").innerHTML= "<table class='demographics' style='text-align:left'><tr><td>Please fill out these demographic details. This is just for our records, and it is all kept separate from the study data. As long as you finish the experiment you will get paid no matter what you put here, so please be honest.<br/></td></tr>"+
 	"<tr><td>&nbsp</td></tr>"+
 	"<tr><td>"+
 	"Gender: <input type=\"radio\" name=\"gender\" id=\"male\" value=\"male\">&nbsp Male&nbsp&nbsp"+
